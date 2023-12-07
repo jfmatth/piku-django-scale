@@ -1,0 +1,1 @@
+# piku-django-scale
