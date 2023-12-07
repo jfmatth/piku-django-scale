@@ -1,0 +1,1 @@
+wsgi: scale.wsgi:application
