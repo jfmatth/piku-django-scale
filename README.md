@@ -9,7 +9,7 @@ The repository to support my presentation at [Scale 21x](https://www.socallinuxe
 
 ```
 curl https://piku.github.io/get | sh
-sudo ./piku-bootstrap.sh install piku.yml
+sudo ./piku-bootstrap install piku.yml
 ```
 
 -  Back on the client, Grab the repo, setup PIPENV and add piku user to remote GIT repo
