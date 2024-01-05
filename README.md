@@ -17,6 +17,7 @@ sudo ./piku-bootstrap install piku.yml
 git clone https://github.com/jfmatth/piku-django-scale.git
 cd piku-django-scale
 pipenv shell
+pipenv update
 git remote add piku piku@server:appname
 ```
 
@@ -52,7 +53,7 @@ piku logs
 
 Scale app +1 (add another UWSGI instance)
 ```
-piku ps:2
+piku ps:scale wsgi=2
 ```
 
 Shell into instance for local commands
