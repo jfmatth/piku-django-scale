@@ -15,6 +15,7 @@ sudo ./piku-bootstrap install piku.yml
 -  Back on the client, Grab the repo, setup PIPENV and add piku user to remote GIT repo
 ```
 git clone https://github.com/jfmatth/piku-django-scale.git
+cd piku-django-scale
 pipenv shell
 git remote add piku piku@server:appname
 ```
