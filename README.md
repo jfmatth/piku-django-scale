@@ -30,10 +30,25 @@ python manage.py runserver
 browse to http://127.0.0.1:8000 to test
 
 
-# Push code to piku
+# Push code to piku and GIT hooks
 ```
 git push piku
 ```
+
+You'll need to use a git feature called hooks that rebuilds the ```requirements.txt``` file on a commit, since Pipenv doesn't create one automatically.
+
+In the file .git/pre-commit, add the following code
+```
+#!/bin/bash
+
+# Generate requirements.txt from Pipfile
+pipenv sync
+pipenv requirements > requirements.txt
+
+# Add requirements.txt to the commit
+git add requirements.txt
+```
+
 
 ## Configure environment
 ```
