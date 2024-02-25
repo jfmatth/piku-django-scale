@@ -1,0 +1,27 @@
+>> Build VM
+- Validate racknerd is reachable (ping scale21.3756home.org)
+
+- If not reachable (via Internet), build one locall
+
+(via Powershell)
+
+>>ON VM
+curl https://piku.github.io/get | sh
+./piku-bootstrap install
+
+
+>>ON CLIENT (Internet)
+cd development/scale
+git clone https://github.com/jfmatth/piku-django-scale.git
+git remote add piku piku@scale21.3756home.org
+git push piku
+piku config:add NGINX_SERVER_NAME=scale21.3756home.org
+
+>>ON CLIENT (no Internet)
+cd development/scale
+git clone https://github.com/jfmatth/piku-django-scale.git
+git remote add piku piku@scale.mshome.net
+git push piku
+piku config:add NGINX_SERVER_NAME=scale21.3756home.org
+
+Visit website :)
