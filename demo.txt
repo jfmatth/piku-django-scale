@@ -1,7 +1,7 @@
 >> Build VM
 - Validate racknerd is reachable (ping scale21.3756home.org)
 
-- If not reachable (via Internet), build one locall
+- If not reachable (via Internet), build one locally
 
 (via Powershell)
 
